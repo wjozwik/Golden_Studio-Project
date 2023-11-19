@@ -36,6 +36,21 @@ section {
     padding: 120px 0;
 }
 
+h1 {
+    font-size: $font-XXL;
+    font-family: $font-second;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: $font-XXXL;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 h3 {
     font-size: $font-XXL;
     text-transform: uppercase;
@@ -90,6 +105,7 @@ nav {
 
     .row {
         justify-content: space-between;
+        
     }
     .row div {
         display: flex;
@@ -108,11 +124,11 @@ nav {
 
     ul {
         list-style-type: none;
+        text-align: right;
 
         li {
             display: inline-block;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 0 20px;
             font-size: $font-S;
             font-weight: 500;
             text-transform: uppercase;
@@ -134,32 +150,22 @@ nav {
         }
     }
 }
+@media (max-width: 767px) {
+    nav ul li {
+        padding: 2px;
+    }
+}
+
 
 /* Welcome */
-
 .welcome {
-    display: flex;
-    min-height: 600px;
-    
-    .welcome-inner {
-        margin: auto;
-        max-width: 70%;
+    .welcome-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-    }
-
-    h1 {
-        font-size: $font-XXL;
-        font-family: $font-second;
-        font-style: italic;
-        font-weight: 500;
-        text-transform: capitalize;
-    }
-
-    h2 {
-        font-size: $font-XXXL;
-        text-transform: uppercase;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        height: 600px;
     }
 
     .btn {
@@ -180,6 +186,16 @@ nav {
         color: $color-main;
         background-color: white;
         transition: 1s;
+    }
+}
+
+@media (max-width: 767px) {
+    .welcome {
+        h1, h2 {
+            scale: 0.7;
+            padding: 0;
+            line-height: 1;
+        }
     }
 }
 
@@ -220,6 +236,12 @@ nav {
 
 .services .row div:hover .icon-wrapper i.hover-none {
     display: none;
+}
+
+@media (max-width: 575px) {
+    .icon-wrapper {
+        padding-top: 50px;
+    }
 }
 
 /* Portfolio */
@@ -265,6 +287,44 @@ nav {
     }
 }
 
+/* Footer */
+footer {
+    .d-flex {
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        padding: 50px 0;
+        color: $color-description;
+        font-size: $font-S;
+    }
 
+    a {
+        display: inline-block;
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 9px;
+        margin: 0 5px;
+        background-color: black;
+        color: white;
+
+        &:hover {
+            background-color: $color-main;
+            scale: 1.2;
+            transition: 1s;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        .soc-med-wrapper {
+            padding-top: 50px;
+        }
+    }
+}
 
 // * {border: 1px solid black;}
