@@ -22,7 +22,6 @@ $font-S: 14px;
     margin: 0;
     padding: 0;
     font-family: $font-main;
-    // border: 1px solid black;
 }
 
 .color-main {
@@ -35,6 +34,25 @@ a {
 
 section {
     padding: 120px 0;
+}
+
+h3 {
+    font-size: $font-XXL;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+h4 {
+    color: $color-description;
+    font-family: $font-second;
+    font-style: italic;
+    font-weight: 300;
+    padding-bottom: 80px;
+}
+
+h5 {
+    font-size: $font-L;
+    padding: 15px 0;
 }
 
 /* Header */
@@ -171,25 +189,6 @@ nav {
     .row {
         text-align: center;
     }
-    .row:first-of-type {
-        padding-bottom: 80px;
-    }
-
-    h3 {
-        font-size: $font-XXL;
-        text-transform: uppercase;
-        padding-bottom: 15px;
-
-    }
-
-    h4 {
-        color: $color-description;
-        font-family: $font-second;
-        font-style: italic;
-        font-weight: 300;
-
-    }
-
 
     i {
         display: inline-block;
@@ -207,10 +206,6 @@ nav {
         display: none;
     }
 
-    h5 {
-        font-size: $font-L;
-        padding: 15px 0;
-    }
 
     p {
         color: $color-description;
@@ -219,15 +214,57 @@ nav {
     }
 }
 
-.services .col:hover .icon-wrapper i.fa-bounce {
+.services .row div:hover .icon-wrapper i.fa-bounce {
     display: inline-block;
 }
 
-.services .col:hover .icon-wrapper i.hover-none {
+.services .row div:hover .icon-wrapper i.hover-none {
     display: none;
+}
+
+/* Portfolio */
+.portfolio {
+    background-color: #f7f7f7;
+
+    .row {
+        text-align: center;
+    }
+
+    .img-wrapper {
+        width: 100%;
+        height: 30vh;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    h5 {
+        padding: 20px 0 0 0;
+    }
+    p {
+        color: $color-description;
+        font-size: $font-S;
+        font-family: $font-second;
+        font-style: italic;
+        padding: 0 0 20px 0;
+        margin-bottom: 24px;
+    }
+
+    .box-wrapper {
+        background-color: white;
+
+        &:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: 1s;
+            scale: 1.05;
+        }
+    }
 }
 
 
 
-
-
+// * {border: 1px solid black;}
