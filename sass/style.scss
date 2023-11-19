@@ -1,0 +1,155 @@
+/* Fonts and styles */
+$font-logo: 'Wisdom Script', sans-serif;
+$font-main: 'Montserrat', sans-serif;
+$font-second: 'Droid Serif', sans-serif;
+$font-standard-text: 'Roboto Slab', sans-serif;
+$color-main: #fed136;
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-main;
+    // border: 1px solid black;
+}
+
+.color-main {
+    color: #fed136;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+header {
+    position: relative;
+    height: 700px;
+    background-image: url(/images/splash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    color: white;
+}
+
+header::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+header * {
+    z-index: 2;
+}
+
+/* Nav */
+nav {
+    height: 100px;
+
+    .row {
+        justify-content: space-between;
+    }
+    .row div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .row div:nth-of-type(2) {
+        justify-content: flex-end;
+    }
+
+    .color-main {
+        font-family: $font-logo;
+        font-size: 26px;
+        height: 100px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            a {
+                color: white;
+            }
+        }
+
+        li:hover a {
+            color: $color-main;
+            // text-decoration: underline;
+            border-bottom: 1px dotted white;
+            transition: all 1s;
+        }
+
+        li:last-of-type {
+            padding-right: 0;
+        }
+    }
+}
+
+/* Welcome */
+
+.welcome {
+    display: flex;
+    min-height: 600px;
+    
+    .welcome-inner {
+        margin: auto;
+        max-width: 70%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-family: $font-second;
+        font-style: italic;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    h2 {
+        font-size: 75px;
+        text-transform: uppercase;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        border-radius: 3px;
+        background-color: $color-main;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 21px;
+        width: 240px;
+        height: 64px;
+    }
+
+    .btn:hover {
+        color: $color-main;
+        background-color: white;
+        transition: 1s;
+    }
+}
